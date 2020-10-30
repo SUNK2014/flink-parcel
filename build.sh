@@ -36,7 +36,7 @@ function build_cm_ext {  #Checkout if dir does not exist
 
 function get_flink {
   if [ ! -f "$flink_archive" ]; then
-    wget $FLINK_URL
+    wget --no-check-certificate $FLINK_URL
   fi
   #flink_md5="$( md5sum $flink_archive | cut -d' ' -f1 )"
   #if [ "$flink_md5" != "$FLINK_MD5" ]; then
